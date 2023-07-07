@@ -155,3 +155,253 @@ and the repository exists.
  DEBUG [435b5ef6] 	tar: 
  DEBUG [435b5ef6] 	Exiting with failure status due to previous errors
  DEBUG [435b5ef6] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:38:03 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [53c22ad2] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [53c22ad2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [53c22ad2] Finished in 0.268 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-264e5750d1a06216240e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-264e5750d1a06216240e.sh 100.0%
+  INFO [33704f50] Running /usr/bin/env chmod 700 /tmp/git-ssh-264e5750d1a06216240e.sh as root@217.25.90.148
+ DEBUG [33704f50] Command: /usr/bin/env chmod 700 /tmp/git-ssh-264e5750d1a06216240e.sh
+  INFO [33704f50] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [dd5102ca] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as root@217.25.90.148
+ DEBUG [dd5102ca] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-264e5750d1a06216240e.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [dd5102ca] 	7e50b15f08db90defe31666c87039cf3e97d598f	HEAD
+  INFO [dd5102ca] Finished in 1.880 seconds with exit status 0 (successful).
+  INFO [8da36349] Running /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases as root@217.25.90.148
+ DEBUG [8da36349] Command: /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases
+  INFO [8da36349] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [e7e50fb0] Running [ -f /home/deploy/rinat/current/REVISION ] as root@217.25.90.148
+ DEBUG [e7e50fb0] Command: [ -f /home/deploy/rinat/current/REVISION ]
+ DEBUG [e7e50fb0] Finished in 0.045 seconds with exit status 1 (failed).
+ DEBUG [cd374c0c] Running [ -f /home/deploy/rinat/repo/HEAD ] as root@217.25.90.148
+ DEBUG [cd374c0c] Command: [ -f /home/deploy/rinat/repo/HEAD ]
+ DEBUG [cd374c0c] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/rinat/repo
+ DEBUG [1bfc4adf] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [1bfc4adf] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [1bfc4adf] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [81e256ea] Running /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git as root@217.25.90.148
+ DEBUG [81e256ea] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-264e5750d1a06216240e.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git )
+  INFO [81e256ea] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [fb6f4146] Running /usr/bin/env git remote update --prune as root@217.25.90.148
+ DEBUG [fb6f4146] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-264e5750d1a06216240e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [fb6f4146] 	Fetching origin
+ DEBUG [fb6f4146] 	From github.com:gabrin/rinat
+   67eb82e..7e50b15  master     -> master
+  INFO [fb6f4146] Finished in 1.832 seconds with exit status 0 (successful).
+ DEBUG [fd49e758] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [fd49e758] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [fd49e758] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [f4f9780f] Running /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707143806 as root@217.25.90.148
+ DEBUG [f4f9780f] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-264e5750d1a06216240e.sh" ; /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707143806 )
+  INFO [f4f9780f] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO [6ad037a6] Running /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707143806 as root@217.25.90.148
+ DEBUG [6ad037a6] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-264e5750d1a06216240e.sh" ; /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707143806 )
+ DEBUG [6ad037a6] 	fatal: pathspec '_site' did not match any files
+ DEBUG [6ad037a6] 	tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:39:13 +0300 cap production deploy:setu
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:39:20 +0300 cap production deploy:setup
+  INFO ---------------------------------------------------------------------------
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:39:27 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5dd0c969] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [5dd0c969] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5dd0c969] Finished in 0.643 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh 0.0%
+  INFO Uploading /tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh 100.0%
+  INFO [d405fe02] Running /usr/bin/env chmod 700 /tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh as root@217.25.90.148
+ DEBUG [d405fe02] Command: /usr/bin/env chmod 700 /tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh
+  INFO [d405fe02] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [daaf413c] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as root@217.25.90.148
+ DEBUG [daaf413c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [daaf413c] 	7e50b15f08db90defe31666c87039cf3e97d598f	HEAD
+  INFO [daaf413c] Finished in 1.709 seconds with exit status 0 (successful).
+  INFO [00022988] Running /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases as root@217.25.90.148
+ DEBUG [00022988] Command: /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases
+  INFO [00022988] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [aaa4da9b] Running [ -f /home/deploy/rinat/current/REVISION ] as root@217.25.90.148
+ DEBUG [aaa4da9b] Command: [ -f /home/deploy/rinat/current/REVISION ]
+ DEBUG [aaa4da9b] Finished in 0.051 seconds with exit status 1 (failed).
+ DEBUG [0e57c391] Running [ -f /home/deploy/rinat/repo/HEAD ] as root@217.25.90.148
+ DEBUG [0e57c391] Command: [ -f /home/deploy/rinat/repo/HEAD ]
+ DEBUG [0e57c391] Finished in 0.049 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/rinat/repo
+ DEBUG [7e38ea03] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [7e38ea03] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [7e38ea03] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [b92f06b0] Running /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git as root@217.25.90.148
+ DEBUG [b92f06b0] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git )
+  INFO [b92f06b0] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [bfe4e22b] Running /usr/bin/env git remote update --prune as root@217.25.90.148
+ DEBUG [bfe4e22b] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [bfe4e22b] 	Fetching origin
+  INFO [bfe4e22b] Finished in 1.680 seconds with exit status 0 (successful).
+ DEBUG [1848843a] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [1848843a] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [1848843a] Finished in 0.045 seconds with exit status 0 (successful).
+  INFO [3b41ece8] Running /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707143930 as root@217.25.90.148
+ DEBUG [3b41ece8] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh" ; /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707143930 )
+  INFO [3b41ece8] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [547e7d31] Running /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707143930 as root@217.25.90.148
+ DEBUG [547e7d31] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c7f6f9d293bf9fc2bbe.sh" ; /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707143930 )
+ DEBUG [547e7d31] 	fatal: pathspec '_site' did not match any files
+ DEBUG [547e7d31] 	tar: 
+ DEBUG [547e7d31] 	This does not look like a tar archive
+ DEBUG [547e7d31] 	
+ DEBUG [547e7d31] 	tar: 
+ DEBUG [547e7d31] 	Exiting with failure status due to previous errors
+ DEBUG [547e7d31] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:42:59 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [530ea55f] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [530ea55f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [530ea55f] Finished in 0.660 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cc12ff3fe4675d53d1d4.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cc12ff3fe4675d53d1d4.sh 100.0%
+  INFO [99384bed] Running /usr/bin/env chmod 700 /tmp/git-ssh-cc12ff3fe4675d53d1d4.sh as root@217.25.90.148
+ DEBUG [99384bed] Command: /usr/bin/env chmod 700 /tmp/git-ssh-cc12ff3fe4675d53d1d4.sh
+  INFO [99384bed] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [c691fe83] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as root@217.25.90.148
+ DEBUG [c691fe83] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cc12ff3fe4675d53d1d4.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [c691fe83] 	7e50b15f08db90defe31666c87039cf3e97d598f	HEAD
+  INFO [c691fe83] Finished in 1.674 seconds with exit status 0 (successful).
+  INFO [d4aef984] Running /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases as root@217.25.90.148
+ DEBUG [d4aef984] Command: /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases
+  INFO [d4aef984] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [68496588] Running [ -f /home/deploy/rinat/current/REVISION ] as root@217.25.90.148
+ DEBUG [68496588] Command: [ -f /home/deploy/rinat/current/REVISION ]
+ DEBUG [68496588] Finished in 0.052 seconds with exit status 1 (failed).
+ DEBUG [6a626079] Running [ -f /home/deploy/rinat/repo/HEAD ] as root@217.25.90.148
+ DEBUG [6a626079] Command: [ -f /home/deploy/rinat/repo/HEAD ]
+ DEBUG [6a626079] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/rinat/repo
+ DEBUG [d5dd0a26] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [d5dd0a26] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [d5dd0a26] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [0ecf2cd0] Running /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git as root@217.25.90.148
+ DEBUG [0ecf2cd0] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cc12ff3fe4675d53d1d4.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git )
+  INFO [0ecf2cd0] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [79341e43] Running /usr/bin/env git remote update --prune as root@217.25.90.148
+ DEBUG [79341e43] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cc12ff3fe4675d53d1d4.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [79341e43] 	Fetching origin
+  INFO [79341e43] Finished in 1.733 seconds with exit status 0 (successful).
+ DEBUG [c92fe245] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [c92fe245] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [c92fe245] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [04b6603c] Running /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707144302 as root@217.25.90.148
+ DEBUG [04b6603c] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cc12ff3fe4675d53d1d4.sh" ; /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707144302 )
+  INFO [04b6603c] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [15391f8f] Running /usr/bin/env git archive main _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707144302 as root@217.25.90.148
+ DEBUG [15391f8f] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cc12ff3fe4675d53d1d4.sh" ; /usr/bin/env git archive main _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707144302 )
+ DEBUG [15391f8f] 	fatal: not a valid object name: main
+ DEBUG [15391f8f] 	tar: This does not look like a tar archive
+tar: Exiting with failure status due to previous errors
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:43:47 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1b5541e6] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [1b5541e6] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1b5541e6] Finished in 0.258 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-12eaecbdbb686e9a9483.sh 0.0%
+  INFO Uploading /tmp/git-ssh-12eaecbdbb686e9a9483.sh 100.0%
+  INFO [4f434e5f] Running /usr/bin/env chmod 700 /tmp/git-ssh-12eaecbdbb686e9a9483.sh as root@217.25.90.148
+ DEBUG [4f434e5f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-12eaecbdbb686e9a9483.sh
+  INFO [4f434e5f] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [1a15cf36] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as root@217.25.90.148
+ DEBUG [1a15cf36] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-12eaecbdbb686e9a9483.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [1a15cf36] 	7e50b15f08db90defe31666c87039cf3e97d598f	HEAD
+  INFO [1a15cf36] Finished in 1.674 seconds with exit status 0 (successful).
+  INFO [afdec0ed] Running /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases as root@217.25.90.148
+ DEBUG [afdec0ed] Command: /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases
+  INFO [afdec0ed] Finished in 0.049 seconds with exit status 0 (successful).
+ DEBUG [73ff386b] Running [ -f /home/deploy/rinat/current/REVISION ] as root@217.25.90.148
+ DEBUG [73ff386b] Command: [ -f /home/deploy/rinat/current/REVISION ]
+ DEBUG [73ff386b] Finished in 0.047 seconds with exit status 1 (failed).
+ DEBUG [97ca5672] Running [ -f /home/deploy/rinat/repo/HEAD ] as root@217.25.90.148
+ DEBUG [97ca5672] Command: [ -f /home/deploy/rinat/repo/HEAD ]
+ DEBUG [97ca5672] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/rinat/repo
+ DEBUG [05e34e4d] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [05e34e4d] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [05e34e4d] Finished in 0.046 seconds with exit status 0 (successful).
+  INFO [8ef7e2f6] Running /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git as root@217.25.90.148
+ DEBUG [8ef7e2f6] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-12eaecbdbb686e9a9483.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git )
+  INFO [8ef7e2f6] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [6010f99f] Running /usr/bin/env git remote update --prune as root@217.25.90.148
+ DEBUG [6010f99f] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-12eaecbdbb686e9a9483.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [6010f99f] 	Fetching origin
+  INFO [6010f99f] Finished in 1.595 seconds with exit status 0 (successful).
+ DEBUG [5f4e35e9] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [5f4e35e9] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [5f4e35e9] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [9abd85ec] Running /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707144349 as root@217.25.90.148
+ DEBUG [9abd85ec] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-12eaecbdbb686e9a9483.sh" ; /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707144349 )
+  INFO [9abd85ec] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [62d4e181] Running /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707144349 as root@217.25.90.148
+ DEBUG [62d4e181] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-12eaecbdbb686e9a9483.sh" ; /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707144349 )
+ DEBUG [62d4e181] 	fatal: pathspec '_site' did not match any files
+ DEBUG [62d4e181] 	tar: 
+ DEBUG [62d4e181] 	This does not look like a tar archive
+ DEBUG [62d4e181] 	
+ DEBUG [62d4e181] 	tar: 
+ DEBUG [62d4e181] 	Exiting with failure status due to previous errors
+ DEBUG [62d4e181] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:44:45 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [41f76277] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [41f76277] Command: /usr/bin/env mkdir -p /tmp
+  INFO [41f76277] Finished in 0.616 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-d833b5307c129d1a5822.sh 0.0%
+  INFO Uploading /tmp/git-ssh-d833b5307c129d1a5822.sh 100.0%
+  INFO [547ab660] Running /usr/bin/env chmod 700 /tmp/git-ssh-d833b5307c129d1a5822.sh as root@217.25.90.148
+ DEBUG [547ab660] Command: /usr/bin/env chmod 700 /tmp/git-ssh-d833b5307c129d1a5822.sh
+  INFO [547ab660] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [791cff85] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as root@217.25.90.148
+ DEBUG [791cff85] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d833b5307c129d1a5822.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [791cff85] 	7e50b15f08db90defe31666c87039cf3e97d598f	HEAD
+  INFO [791cff85] Finished in 1.678 seconds with exit status 0 (successful).
+  INFO [c93d63d9] Running /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases as root@217.25.90.148
+ DEBUG [c93d63d9] Command: /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases
+  INFO [c93d63d9] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [0ba67ca2] Running [ -f /home/deploy/rinat/current/REVISION ] as root@217.25.90.148
+ DEBUG [0ba67ca2] Command: [ -f /home/deploy/rinat/current/REVISION ]
+ DEBUG [0ba67ca2] Finished in 0.045 seconds with exit status 1 (failed).
+ DEBUG [9a29f331] Running [ -f /home/deploy/rinat/repo/HEAD ] as root@217.25.90.148
+ DEBUG [9a29f331] Command: [ -f /home/deploy/rinat/repo/HEAD ]
+ DEBUG [9a29f331] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/deploy/rinat/repo
+ DEBUG [f34d6f93] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [f34d6f93] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [f34d6f93] Finished in 0.047 seconds with exit status 0 (successful).
+  INFO [8bf34105] Running /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git as root@217.25.90.148
+ DEBUG [8bf34105] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d833b5307c129d1a5822.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git )
+  INFO [8bf34105] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [10e61253] Running /usr/bin/env git remote update --prune as root@217.25.90.148
+ DEBUG [10e61253] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d833b5307c129d1a5822.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [10e61253] 	Fetching origin
+  INFO [10e61253] Finished in 1.723 seconds with exit status 0 (successful).
+ DEBUG [38fd1f77] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [38fd1f77] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [38fd1f77] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [7790beaf] Running /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707144448 as root@217.25.90.148
+ DEBUG [7790beaf] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d833b5307c129d1a5822.sh" ; /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707144448 )
+  INFO [7790beaf] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [eb987069] Running /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707144448 as root@217.25.90.148
+ DEBUG [eb987069] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-d833b5307c129d1a5822.sh" ; /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707144448 )
+ DEBUG [eb987069] 	fatal: pathspec '_site' did not match any files
+ DEBUG [eb987069] 	tar: 
+ DEBUG [eb987069] 	This does not look like a tar archive
+ DEBUG [eb987069] 	
+ DEBUG [eb987069] 	tar: 
+ DEBUG [eb987069] 	Exiting with failure status due to previous errors
+ DEBUG [eb987069] 	
