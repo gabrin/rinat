@@ -4,7 +4,7 @@ lock "~> 3.17.3"
 set :application, "rinat"
 set :repo_url, "git@github.com:gabrin/rinat.git"
 set :branch, "master"
-set :deploy_to, '/home/deploy/rinat'
+set :deploy_to, '/root/rinat'
 set :ssh_options, { :forward_agent => true }
 set :repo_tree, '_site'
 set :ssh_options, {verify_host_key: :never}
