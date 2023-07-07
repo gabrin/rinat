@@ -1,0 +1,91 @@
+# Logfile created on 2023-07-07 16:58:06 +0300 by logger.rb/v1.4.3
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 16:58:06 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2e30b18f] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [2e30b18f] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 16:59:22 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a0720054] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [a0720054] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:01:01 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e8f8d41f] Running /usr/bin/env mkdir -p /tmp as root@1479911-cv23179.tw1.ru
+ DEBUG [e8f8d41f] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:08:03 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5ba1a715] Running /usr/bin/env mkdir -p /tmp as deploy@1479911-cv23179.tw1.ru
+ DEBUG [5ba1a715] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:08:40 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [148a6de9] Running /usr/bin/env mkdir -p /tmp as deploy@1479911-cv23179.tw1.ru
+ DEBUG [148a6de9] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:09:07 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ad860013] Running /usr/bin/env mkdir -p /tmp as deploy@217.25.90.148
+ DEBUG [ad860013] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:10:55 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [39e63d35] Running /usr/bin/env mkdir -p /tmp as deploy@217.25.90.148
+ DEBUG [39e63d35] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:11:39 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bad63f7c] Running /usr/bin/env mkdir -p /tmp as deploy@217.25.90.148
+ DEBUG [bad63f7c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:12:16 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [08cdf079] Running /usr/bin/env mkdir -p /tmp as deploy@217.25.90.148
+ DEBUG [08cdf079] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:13:11 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f86ad0fa] Running /usr/bin/env mkdir -p /tmp as deploy@217.25.90.148
+ DEBUG [f86ad0fa] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f86ad0fa] Finished in 3.078 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-b41ec974aeb8e874815e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-b41ec974aeb8e874815e.sh 100.0%
+  INFO [fa59d89c] Running /usr/bin/env chmod 700 /tmp/git-ssh-b41ec974aeb8e874815e.sh as deploy@217.25.90.148
+ DEBUG [fa59d89c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-b41ec974aeb8e874815e.sh
+  INFO [fa59d89c] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [812a4a2f] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as deploy@217.25.90.148
+ DEBUG [812a4a2f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-b41ec974aeb8e874815e.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [812a4a2f] 	Could not create directory '/home/deploy/.ssh' (Permission denied).
+ DEBUG [812a4a2f] 	Failed to add the host to the list of known hosts (/home/deploy/.ssh/known_hosts).
+ DEBUG [812a4a2f] 	git@github.com: Permission denied (publickey).
+ DEBUG [812a4a2f] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:14:01 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [867a56e6] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [867a56e6] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:14:45 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [693307da] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [693307da] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:26:16 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b5b073d4] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [b5b073d4] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:27:02 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a9c11ccf] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [a9c11ccf] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:28:22 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [575e3e9f] Running /usr/bin/env mkdir -p /tmp as root@1479911-cv23179.tw1.ru
+ DEBUG [575e3e9f] Command: /usr/bin/env mkdir -p /tmp

@@ -1,0 +1,12 @@
+global:
+  tagline: English
+  telegramm: Telegram
+  twitter: Twitter
+  github: GitHub
+  vk: VK
+langs:
+  en: English
+  ru: Русский
+pages:
+  posts: Posts
+  pagination: Pagination
