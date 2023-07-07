@@ -89,3 +89,8 @@ and the repository exists.
   INFO ---------------------------------------------------------------------------
   INFO [575e3e9f] Running /usr/bin/env mkdir -p /tmp as root@1479911-cv23179.tw1.ru
  DEBUG [575e3e9f] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:32:31 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [13dcf71c] Running /usr/bin/env mkdir -p /tmp as root@1479911-cv23179.tw1.ru
+ DEBUG [13dcf71c] Command: /usr/bin/env mkdir -p /tmp
