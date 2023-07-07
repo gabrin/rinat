@@ -94,3 +94,64 @@ and the repository exists.
   INFO ---------------------------------------------------------------------------
   INFO [13dcf71c] Running /usr/bin/env mkdir -p /tmp as root@1479911-cv23179.tw1.ru
  DEBUG [13dcf71c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:35:33 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [79a67c93] Running /usr/bin/env mkdir -p /tmp as root@1479911-cv23179.tw1.ru
+ DEBUG [79a67c93] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2023-07-07 17:37:39 +0300 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1d7efe22] Running /usr/bin/env mkdir -p /tmp as root@217.25.90.148
+ DEBUG [1d7efe22] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1d7efe22] Finished in 0.862 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-2c19fad787b375b1d5a8.sh 0.0%
+  INFO Uploading /tmp/git-ssh-2c19fad787b375b1d5a8.sh 100.0%
+  INFO [1daa1b6b] Running /usr/bin/env chmod 700 /tmp/git-ssh-2c19fad787b375b1d5a8.sh as root@217.25.90.148
+ DEBUG [1daa1b6b] Command: /usr/bin/env chmod 700 /tmp/git-ssh-2c19fad787b375b1d5a8.sh
+  INFO [1daa1b6b] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [571cc72f] Running /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD as root@217.25.90.148
+ DEBUG [571cc72f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c19fad787b375b1d5a8.sh" ; /usr/bin/env git ls-remote git@github.com:gabrin/rinat.git HEAD )
+ DEBUG [571cc72f] 	67eb82e6bc05199484ab1650cdeb9f093f76cf44	HEAD
+  INFO [571cc72f] Finished in 1.945 seconds with exit status 0 (successful).
+  INFO [54621a60] Running /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases as root@217.25.90.148
+ DEBUG [54621a60] Command: /usr/bin/env mkdir -p /home/deploy/rinat/shared /home/deploy/rinat/releases
+  INFO [54621a60] Finished in 0.047 seconds with exit status 0 (successful).
+ DEBUG [d49227a7] Running [ -f /home/deploy/rinat/current/REVISION ] as root@217.25.90.148
+ DEBUG [d49227a7] Command: [ -f /home/deploy/rinat/current/REVISION ]
+ DEBUG [d49227a7] Finished in 0.046 seconds with exit status 1 (failed).
+ DEBUG [fe7f65a5] Running [ -f /home/deploy/rinat/repo/HEAD ] as root@217.25.90.148
+ DEBUG [fe7f65a5] Command: [ -f /home/deploy/rinat/repo/HEAD ]
+ DEBUG [fe7f65a5] Finished in 0.049 seconds with exit status 1 (failed).
+ DEBUG [b51465f1] Running if test ! -d /home/deploy/rinat; then echo "Directory does not exist '/home/deploy/rinat'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [b51465f1] Command: if test ! -d /home/deploy/rinat; then echo "Directory does not exist '/home/deploy/rinat'" 1>&2; false; fi
+ DEBUG [b51465f1] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [b52a58d1] Running /usr/bin/env git clone --mirror git@github.com:gabrin/rinat.git /home/deploy/rinat/repo as root@217.25.90.148
+ DEBUG [b52a58d1] Command: cd /home/deploy/rinat && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c19fad787b375b1d5a8.sh" ; /usr/bin/env git clone --mirror git@github.com:gabrin/rinat.git /home/deploy/rinat/repo )
+ DEBUG [b52a58d1] 	Cloning into bare repository '/home/deploy/rinat/repo'...
+  INFO [b52a58d1] Finished in 2.633 seconds with exit status 0 (successful).
+ DEBUG [a9a7ef2d] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [a9a7ef2d] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [a9a7ef2d] Finished in 0.048 seconds with exit status 0 (successful).
+  INFO [2f72626f] Running /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git as root@217.25.90.148
+ DEBUG [2f72626f] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c19fad787b375b1d5a8.sh" ; /usr/bin/env git remote set-url origin git@github.com:gabrin/rinat.git )
+  INFO [2f72626f] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [54318cc2] Running /usr/bin/env git remote update --prune as root@217.25.90.148
+ DEBUG [54318cc2] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c19fad787b375b1d5a8.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [54318cc2] 	Fetching origin
+  INFO [54318cc2] Finished in 1.600 seconds with exit status 0 (successful).
+ DEBUG [d16ea93c] Running if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi as root@217.25.90.148
+ DEBUG [d16ea93c] Command: if test ! -d /home/deploy/rinat/repo; then echo "Directory does not exist '/home/deploy/rinat/repo'" 1>&2; false; fi
+ DEBUG [d16ea93c] Finished in 0.050 seconds with exit status 0 (successful).
+  INFO [9314ed79] Running /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707143742 as root@217.25.90.148
+ DEBUG [9314ed79] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c19fad787b375b1d5a8.sh" ; /usr/bin/env mkdir -p /home/deploy/rinat/releases/20230707143742 )
+  INFO [9314ed79] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [435b5ef6] Running /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707143742 as root@217.25.90.148
+ DEBUG [435b5ef6] Command: cd /home/deploy/rinat/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-2c19fad787b375b1d5a8.sh" ; /usr/bin/env git archive master _site | /usr/bin/env tar -x --strip-components 1 -f - -C /home/deploy/rinat/releases/20230707143742 )
+ DEBUG [435b5ef6] 	fatal: pathspec '_site' did not match any files
+ DEBUG [435b5ef6] 	tar: 
+ DEBUG [435b5ef6] 	This does not look like a tar archive
+ DEBUG [435b5ef6] 	
+ DEBUG [435b5ef6] 	tar: 
+ DEBUG [435b5ef6] 	Exiting with failure status due to previous errors
+ DEBUG [435b5ef6] 	
