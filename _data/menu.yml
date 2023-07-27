@@ -13,8 +13,14 @@ entries:
         url: mailto:rinat@gabidullin.com
       - title: "Быть вкурсе: <a href='https://riggraz.dev'>RSS</a> или <a href='https://github.com/riggraz/no-style-please/network/dependents'>Рассылка</a>"
 
+  - title: engineering
+    post_list:
+      category: engineering
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: example2-archive.html
 
-  - title: заметки
+  - title: заметки ИНЖЕНЕРА
     post_list:
       limit: 5
       show_more: true
