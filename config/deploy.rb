@@ -9,7 +9,7 @@ set :ssh_options, { :forward_agent => true }
 set :repo_tree, '_site'
 set :ssh_options, {verify_host_key: :never}
 set :stage, :production
-server '217.25.90.148', user: 'root', roles: %w{web app}
+server '92.63.177.131', user: 'root', roles: %w{web app}
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
